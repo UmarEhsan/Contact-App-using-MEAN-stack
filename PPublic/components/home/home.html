@@ -1,0 +1,39 @@
+<h1>{{home.title}}</h1>
+<table class="table">
+    <thead>
+
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input class="form-control" type="text" ng-model="home.user.fname" ng-model-options="{'updateOn': 'default blur'}" placeholder="First Name"></td>
+
+        <td><input class="form-control" type="text" ng-model="home.user.lname" ng-model-options="{'updateOn': 'default blur'}" placeholder="Last Name"></td>
+        <td><input class="form-control" type="text" ng-model="home.user.email" ng-model-options="{'updateOn': 'default blur'}" placeholder="Email"></td>
+        <td><button class=" btn btn-primary btn-block" ng-click="home.Save()">Save</button></td>
+
+    </tr>
+    <tr ng-repeat="data in home.persons ">
+
+        <td>{{data.fname}}</td>
+        <td>{{data.lname}}</td>
+        <td>{{data.email}}</td>
+
+        <td> <a ng-click="home.Remove(data._id)">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a></td>
+        <td><a ng-link="edit({id: data._id })">
+            <span class="glyphicon glyphicon-edit">Edit</span>
+        </a></td>
+        <td></td>
+    </tr>
+
+    </tbody>
+
+</table>

@@ -1,0 +1,15 @@
+<form role="form">
+    <div class="form-group">
+        <label for="fname">FirstName:</label>
+        <input type="text" class="form-control" ng-model="edit.user.fname" placeholder="First name">
+    </div>
+    <div class="form-group">
+        <label for="lname">LastName:</label>
+        <input type="text" class="form-control"  ng-model="edit.user.lname"placeholder="Last name">
+    </div>
+    <div class="checkbox">
+        <label for="pwd">Email:</label>
+        <input type="email" class="form-control"  ng-model="edit.user.email" placeholder="Enter email">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="edit.updateUser('/')">Update</button>
+</form>
